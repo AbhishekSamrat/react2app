@@ -1,5 +1,5 @@
 
-import './DisplayComponent';
+
 import  Datafetch from './DisplayComponent';
 
 
@@ -38,7 +38,7 @@ function App(){
 
         <div>
         <h1>Data fetching</h1>
-             <Datafetch database = {state} name = "rahul"/>
+             <Datafetch database = {state} name = "Person Details"/>
         </div>
     )
 
