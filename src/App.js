@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './DisplayComponent';
+import  Datafetch from './DisplayComponent';
+
+
+function App(){
+     const user = "abhi";
+    const state = [
+
+        {
+            "person": {
+              "name": "John Doe",
+              "age": 30,
+              "gender": "male",
+              "address": {
+                "street": "123 Main St",
+                "city": "Anytown",
+                "state": "CA",
+                "zip": "12345"
+              },
+              "contacts": [
+                {
+                  "type": "email",
+                  "value": "john.doe@example.com"
+                },
+                {
+                  "type": "phone",
+                  "value": "+1 (555) 123-4567"
+                }
+              ],
+              "isStudent": false,
+              "grades": null
+            }
+          }
+    ]
+
+    return(
+
+        <div>
+        <h1>Data fetching</h1>
+             <Datafetch database = {state} name = "rahul"/>
+        </div>
+    )
+
 }
 
 export default App;
